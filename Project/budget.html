@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <title>Budget</title>
+</head>
+<body class="container">
+    <div class="container1" >
+     
+    <div class="row">
+      <div class="col-sm box1">
+        <input class="form-control" type="number" id="income" value=""   placeholder="&#x20B9 Income">
+        <label class="labelalign" for="">Income</label>
+      </div>
+      <div class="col-sm box1">
+        <input class="form-control" type="number" id="expenses" value="" placeholder="&#x20B9 Expenses" readonly>
+        <label class="labelalign"  for="">Expenses</label>
+      </div>
+      <div class="col-sm box1">
+        <input class="form-control" type="number" id="u-budget" value=""  placeholder="&#x20B9 Budget" readonly>
+   <label class="labelalign"  id="ub" value="" for="">Budget</label>
+        </div>
+     
+    </div>
+  </div>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    
+    
+
+   <div class="Budgets">
+        <ul class="list-group  ">
+            <li class="list-group-item"> 
+            <div style="text-align: center;">
+            <h1>Monthly Expenses</h1>
+            <p>Enter how much you spend in each of the following:</p>
+            </div>
+            </li>
+            <div class="row">
+              <div class="col-sm-md-lg box2">
+            <li class="list-group-item">Home Rent 
+              <input class="form-control" type="number" id="home" value="" placeholder="&#x20B9 Home Rent">
+            </li>
+            </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-md-lg box2">
+            <li class="list-group-item">Food 
+              <input class="form-control" type="number" id="food" value="" placeholder="&#x20B9 Food">
+            </li>
+            </div>
+            </div>
+            <div class="row">
+              <div class="col-sm box2">
+            <li class="list-group-item">Shopping
+              <input class="form-control" type="number" id="shop" value="" placeholder="&#x20B9 Shopping">
+            </li>
+            </div>
+            </div>
+            <div class="row">
+              <div class="col-sm box2">
+            <li class="list-group-item">Entertainment
+              <input class="form-control" type="number" id="entertain" value="" placeholder="&#x20B9 Entertainment">
+            </li>
+            </div>
+            </div>
+            <div class="row">
+              <div class="col-sm box2">
+            <li class="list-group-item">House Hold
+              <input class="form-control" type="number" id="house" value="" placeholder="&#x20B9 House Hold">
+            </li>
+            </div>
+            </div>
+            <div class="row">
+              <div class="col-sm box2">
+            <li class="list-group-item">Transportation
+              <input class="form-control" type="number" id="transport" value="" placeholder="&#x20B9 Transportation">
+            </li>
+            </div>
+            </div>
+            <div class="row">
+              <div class="col-sm box2">
+            <li class="list-group-item">Total
+              <input class="form-control" type="number" id="total" value="" placeholder="&#x20B9 Total" readonly>
+            </li>
+            </div>
+            </div>
+          </ul>
+          <button onclick="GetExpensive()" class="button" value="Get Expensive" >Get Expensive</button>
+          <script>
+              function GetExpensive()
+              {
+                 //Total Income
+               var home= parseInt(document.getElementById('home').value);
+               var food= parseInt(document.getElementById('food').value);
+               var shop= parseInt(document.getElementById('shop').value);
+               var entertain= parseInt(document.getElementById('entertain').value);
+               var house= parseInt(document.getElementById('house').value);
+               var transport= parseInt(document.getElementById('transport').value);
+               var total=document.getElementById('total');
+               total=home+food+shop+entertain+house+transport;
+                document.getElementById('total').value=total; 
+                document.getElementById('expenses').value=total; 
+                //income 
+                var income=parseInt(document.getElementById('income').value);
+                var ubudget=parseInt(document.getElementById('u-budget').value);
+                ubudget=income-total;
+                //under Budget
+                document.getElementById('u-budget').value=ubudget; 
+                //Check for the under budget
+                if(ubudget<0)
+                {
+                document.getElementById('u-budget').style="color:red; font-weight:bolder;"
+                alert("Over Budget")
+                    
+                }
+                else{
+
+                    document.getElementById('u-budget').style="color:green;font-weight:bolder; "
+                    alert("Under Budget")
+                }
+          
+       
+
+              }
+          </script>
+
+
+    </div>
+     
+   
+</body>
+</html>
