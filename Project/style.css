@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+body
+{
+    background-color: lightslategray;
+    background: rgba( 255, 255, 255, 0.25 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 4px );
+-webkit-backdrop-filter: blur( 4px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+ 
+}
+.container1
+{
+    height: 100%;
+    width: 100%;
+    margin-top: 50px;
+    padding: 20px 20px;
+    background: rgba( 255, 255, 255, 0.25 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 4px );
+-webkit-backdrop-filter: blur( 4px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+    
+    
+}
+.box1{
+    background-color: rgb(209, 156, 87) !important;
+    height: 100px;
+    text-align: center;
+    position: relative !important;
+    padding: 30px;   
+}
+label{
+    color: white;
+    padding-top: 10px;
+}
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button
+{
+    -webkit-appearance: none;
+    margin: 0;
+} 
+input
+{
+    outline: none;
+    height: 80%;
+
+}
+.Budgets
+{
+    position: relative;
+    margin: 50px;
+    background: rgba( 255, 255, 255, 0.25 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 4px );
+-webkit-backdrop-filter: blur( 4px );
+border-radius: 0px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+border: none;
+
+}
+.Home
+{
+    background: black;
+    height: 40px;
+    color: white;
+}
+._Home
+{
+    position: relative;
+}
+
+input::-webkit-outer-spin-button
+input::-webkit-inner-spin-button
+{
+    display: none;
+    margin: 0;
+}
+.button 
+{
+    color: white;
+     border: none; 
+     border-radius: 5px; 
+     margin: 10px;
+     background-color:  rgb(209, 156, 87);
+      padding: 10px 20px;
+}
+.button:hover
+{
+    background-color: rgb(252, 71, 71);
+    transition: 0.5s;
+} 
